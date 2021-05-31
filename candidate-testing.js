@@ -32,29 +32,73 @@ function askQuestion() {
   // for (i = 0; i < questions.length; i++) {
   //   let candidateAnswers = input.question(questions[i])
   // }
-  for (i = 0; i < questions.length; i++) {
-    let candidateAnswers = input.question(questions[i]);
-    let cone = candidateAnswers.toLowerCase();
-    let aone = correctAnswers[i].toLowerCase();
-    console.log(cone + " " + aone)
-  }
+  // let grade = 0;
+  // for (i = 0; i < questions.length; i++) {
+  //   let candidateAnswers = input.question(questions[i]);
+  //   // let cone = candidateAnswers.toLowerCase();
+  //   // let aone = correctAnswers[i].toLowerCase();
+  //   // // console.log(cone + " " + aone)
+  //   // if (cone == aone){
+  //   //   console.log(`${candidateAnswers} is correct!!!!` )
+  //   //   console.log(`The correct answer: ${correctAnswers[i]}`)
+  //   //   grade = grade + 1
+  //   // } else {
+  //   //   grade = grade
+  //   //   console.log(`${candidateAnswers} is incorrect` )
+  //   //   console.log(`The correct answer: ${correctAnswers[i]}`)
+  //   // }
+  //   // console.log(`Your score: ${grade}`)
+  // }
 }
+
 // console.log(cone)
 function gradeQuiz(candidateAnswers) {
+
+  // let cone = candidateAnswers.toLowerCase();
+  //   let aone = correctAnswers[i].toLowerCase();
+  //   // console.log(cone + " " + aone)
+  //   if (cone == aone){
+  //     console.log(`${candidateAnswers} is correct!!!!` )
+  //     console.log(`The correct answer: ${correctAnswers[i]}`)
+  //     grade = grade + 1
+  //   } else {
+  //     grade = grade
+  //     console.log(`${candidateAnswers} is incorrect` )
+  //     console.log(`The correct answer: ${correctAnswers[i]}`)
+  //   }
+  //   console.log(`Your score: ${grade}`)
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   // console.log(candidateAnswers)
   let grade = 0;
+  for (i = 0; i < questions.length; i++) {
 
+    let candidateAnswers = input.question(questions[i]);
+    let cone = candidateAnswers.toLowerCase();
+    let aone = correctAnswers[i].toLowerCase();
+    // console.log(cone + " " + aone)
+    if (cone == aone){
+      console.log(`${candidateAnswers} is correct!!!!` )
+      console.log(`The correct answer: ${correctAnswers[i]}`)
+      grade = grade + 1
+    } else {
+      console.log(`${candidateAnswers} is incorrect` )
+      console.log(`The correct answer: ${correctAnswers[i]}`)
+      grade = grade
+    }
+    console.log(`Your score: ${grade}`)
+  }
   // if (candidateAnswer === correctAnswer) {
   //   console.log(`${candidateAnswer} is correct!!!!`)
   //   grade = grade + 1
   // } else if (candidateAnswer != correctAnswer) {
   //   console.log(`${candidateAnswer} is incorrect`)
   // }
-  for (i = 0; i < questions.length; i++) {
+  // for (i = 0; i < questions.length; i++) {
   // console.log(grade)
-   console.log(aone) 
+   
+  //  console.log(aone) 
+    
     // let aone = correctAnswers[i].toLowerCase();
   // return grade;
     
@@ -67,19 +111,21 @@ function gradeQuiz(candidateAnswers) {
   // //console.log(`your answer ${choice}`);
   //   console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
   //   }
-    if (cone == aone) {
-      grade = grade + 1;
-    //console.log(`your answer ${choice}`);
-    console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
-    } else {
+  //   if (cone == aone) {
+  //     grade = grade + 1;
+  //   //console.log(`your answer ${choice}`);
+  //   console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
+  //   } else {
    
-  //console.log(`your answer ${choice}`);
-    console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
-    }
-    console.log(grade)
-    // return grade;
-  }
+  // //console.log(`your answer ${choice}`);
+  //   console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
+  //   }
+  //   console.log(grade)
+  //   // return grade;
+  // }
   let per = ((grade / 5) * 100);
+  console.log(`Your score: ${grade}/5 !!!! you got ${per}% `)
+  console.log(`Your score ${grade/5} ${(grade/5)*100}%`)
 }
 
 function runProgram() {
