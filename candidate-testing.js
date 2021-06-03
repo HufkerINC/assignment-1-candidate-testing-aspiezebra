@@ -27,28 +27,28 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  // candidateAnswer = input.question(question);
-  // console.log(`Your Answer: ${candidateAnswer} `)
-  // for (i = 0; i < questions.length; i++) {
-  //   let candidateAnswers = input.question(questions[i])
-  // }
-  // let grade = 0;
-  // for (i = 0; i < questions.length; i++) {
-  //   let candidateAnswers = input.question(questions[i]);
-  //   // let cone = candidateAnswers.toLowerCase();
-  //   // let aone = correctAnswers[i].toLowerCase();
-  //   // // console.log(cone + " " + aone)
-  //   // if (cone == aone){
-  //   //   console.log(`${candidateAnswers} is correct!!!!` )
-  //   //   console.log(`The correct answer: ${correctAnswers[i]}`)
-  //   //   grade = grade + 1
-  //   // } else {
-  //   //   grade = grade
-  //   //   console.log(`${candidateAnswers} is incorrect` )
-  //   //   console.log(`The correct answer: ${correctAnswers[i]}`)
-  //   // }
-  //   // console.log(`Your score: ${grade}`)
-  // }
+  candidateAnswer = input.question(question);
+  console.log(`Your Answer: ${candidateAnswer} `)
+  for (i = 0; i < questions.length; i++) {
+    let candidateAnswers = input.question(questions[i])
+  }
+  let grade = 0;
+  for (i = 0; i < questions.length; i++) {
+    let candidateAnswers = input.question(questions[i]);
+    let cone = candidateAnswers.toLowerCase();
+    let aone = correctAnswers[i].toLowerCase();
+    // console.log(cone + " " + aone)
+    if (cone == aone){
+      console.log(`${candidateAnswers} is correct!!!!` )
+      console.log(`The correct answer: ${correctAnswers[i]}`)
+      grade = grade + 1
+    } else {
+      grade = grade
+      console.log(`${candidateAnswers} is incorrect` )
+      console.log(`The correct answer: ${correctAnswers[i]}`)
+    }
+    console.log(`Your score: ${grade}`)
+  }
 }
 
 // console.log(cone)
