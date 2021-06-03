@@ -19,6 +19,7 @@ let correctAnswers = ["true", "40", "Trajectory", "Sally Ride", "3"];
 let candidateAnswers = "";
 let cone = "";
 let aone = "";
+let grade = "";
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   candidateName = input.question("Candidate Name: ");
@@ -51,6 +52,7 @@ function askQuestion() {
   // }
 }
 
+
 // console.log(cone)
 function gradeQuiz(candidateAnswers) {
 
@@ -70,7 +72,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   // console.log(candidateAnswers)
-  let grade = 0;
+  grade = 0;
   for (i = 0; i < questions.length; i++) {
 
     let candidateAnswers = input.question(questions[i]);
@@ -128,7 +130,7 @@ function gradeQuiz(candidateAnswers) {
   console.log(`Your score: ${grade1}/5 !!!! you got ${grade}% `)
   console.log(`Your score ${grade1/5} ${(grade1/5)*100}%`)
 }
-console.log(gradeQuiz)
+// console.log(gradeQuiz)
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
@@ -136,6 +138,8 @@ function runProgram() {
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
+// console.log(gradeQuiz)
+// console.log(gradeQuiz())
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
