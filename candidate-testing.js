@@ -47,7 +47,7 @@ function askQuestion() {
   //   //   console.log(`${candidateAnswers} is incorrect` )
   //   //   console.log(`The correct answer: ${correctAnswers[i]}`)
   //   // }
-  //   // console.log(`Your score: ${grade}`)
+  //   // console.log(`Your grade: ${grade}`)
   // }
 }
 
@@ -66,7 +66,7 @@ function gradeQuiz(candidateAnswers) {
   //     console.log(`${candidateAnswers} is incorrect` )
   //     console.log(`The correct answer: ${correctAnswers[i]}`)
   //   }
-  //   console.log(`Your score: ${grade}`)
+  //   console.log(`Your grade: ${grade}`)
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   // console.log(candidateAnswers)
@@ -86,7 +86,7 @@ function gradeQuiz(candidateAnswers) {
       console.log(`The correct answer: ${correctAnswers[i]}`)
       grade = grade
     }
-    console.log(`Your score: ${grade}`)
+    console.log(`Your grade: ${grade}`)
   }
   // if (candidateAnswer === correctAnswer) {
   //   console.log(`${candidateAnswer} is correct!!!!`)
@@ -122,10 +122,24 @@ function gradeQuiz(candidateAnswers) {
   //   }
   //   console.log(grade)
   //   // return grade;
-  // }
-  let per = ((grade / 5) * 100);
-  console.log(`Your score: ${grade}/5 !!!! you got ${per}% `)
-  console.log(`Your score ${grade/5} ${(grade/5)*100}%`)
+  // // }
+  // let per = ((grade / 5) * 100);
+  // console.log(`Your grade: ${grade}/5 !!!! you got ${per}% `)
+  // console.log(`Your grade ${grade/5} ${(grade/5)*100}%`)
+  let per = (grade / 5) * 100;
+
+// console.log(`Your grade is ${grade} answers correct` );
+console.log(`>>>> Overall Grade: ${per}% (${grade} of 5 responces correct) <<<<`);
+let status = "?";
+if (per >= 60) {
+  status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+  console.log(`>>>> STATUS: ${status} <<<<`);
+// let total = 5;
+// let frac = (correctAns / total);
+  console.log(cone)
 }
 
 function runProgram() {
