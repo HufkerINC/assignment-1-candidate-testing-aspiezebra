@@ -51,7 +51,7 @@ function askQuestion() {
   // //   console.log(`Your score: ${grade}`)
   // }
 }
-
+// console.log(candidateAnswers)
 
 // console.log(cone)
 function gradeQuiz(candidateAnswers) {
@@ -129,7 +129,9 @@ function gradeQuiz(candidateAnswers) {
   grade = ((grade / 5) * 100);
   console.log(`Your score: ${grade1}/5 !!!! you got ${grade}% `)
   console.log(`Your score ${grade1/5} ${(grade1/5)*100}%`)
+  
 }
+// console.log(candidateAnswers)
 // console.log(gradeQuiz)
 function runProgram() {
   askForName();
@@ -139,6 +141,7 @@ function runProgram() {
   gradeQuiz(this.candidateAnswers);
 }
 // console.log(gradeQuiz)
+//console.log(gradeQuiz(candidateAnswers))
 // console.log(gradeQuiz())
 
 // Don't write any code below this line //
