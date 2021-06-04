@@ -80,11 +80,11 @@ function gradeQuiz(candidateAnswers) {
     let aone = correctAnswers[i].toLowerCase();
     // console.log(cone + " " + aone)
     if (cone == aone){
-      console.log(`${candidateAnswers} is correct!!!!` )
+      // console.log(`${candidateAnswers} is correct!!!!` )
       console.log(`The correct answer: ${correctAnswers[i]}`)
       grade = grade + 1
     } else {
-      console.log(`${candidateAnswers} is incorrect` )
+      // console.log(`${candidateAnswers} is incorrect` )
       console.log(`The correct answer: ${correctAnswers[i]}`)
       grade = grade
     }
