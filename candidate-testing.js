@@ -177,11 +177,14 @@ let correctAnswer = "Sally Ride";
 let candidateAnswer = " ";
 // let questions = ["1) True or false: 5,000 meters = 5 kilometers. \n   Your Answer:  ", "2) (5 + 3)/2 * 10 = ? \n   Your Answer:  ", '3) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? \n   Your Answer:  ', "4) Who was the first American female in space? \n   Your Answer:  ", "5) What is the minimum crew size for the International Space Station (ISS)? \n   Your Answer:  "];
 let questions = ["True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "Who was the first American woman in space? ", "What is the minimum crew size for the ISS? "];
-let correctAnswers = ["true", "40", "Trajectory", "Sally Ride", "3"];
-let candidateAnswers = [""];
+let correctAnswers = ["True", "40", "Trajectory", "Sally Ride", "3"];
+let candidateAnswers = [];
 let aone = [];
 let cone = [];
-let score = ""
+let score = "";
+let per = '';
+let grade = "";
+
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -200,8 +203,8 @@ function askQuestion() {
   }
 
 }
-let per = 0;
-let grade = 0;
+per = 0;
+grade = 0;
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
@@ -220,27 +223,40 @@ function gradeQuiz(candidateAnswers) {
   // }
   for (i = 0; i < questions.length; i++) {
   // let candidateAnswers = input.question(questions[i]);
-  let cone = candidateAnswers[i].toLowerCase();
-  let aone = correctAnswers[i].toLowerCase();
-  
+    console.log(candidateAnswers)
+    console.log(candidateAnswers[i])
+    let cone = candidateAnswers[i].toLowerCase();
+    let aone = correctAnswers[i].toLowerCase();
+    // console.log(aone[i])
+    // console.log(cone[i])
   //  console.log(typeof(candidateAnswers));a
 // let answerstwo = answers.tolowercase();
 // let candidateAnswerstwo = candidateAnswers.tolowercase();
 // console.log(answerstwo);
-  if (cone == aone) {
-    grade = grade + 1;
+    if (cone[i] == aone[i]) {
+      grade = grade + 1;
    //console.log(`your answer ${candidateAnswers}`);
-  console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
-  } else {
+    console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
+    } else {
    
   //console.log(`your answer ${candidateAnswers}`);
-  console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
-  }
+    console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
+    }
+    // for(i=0;i<5;i++){
+    //   console.log(aone)
+    //   console.log(cone)
+    //   console.log(candidateAnswers)
+    //   console.log(aone[i])
+    //   console.log(cone[i])
+    //   console.log(candidateAnswers[i])
+    // }
+
 }
 
-per = ((grade / 5) * 100);
+  per = ((grade / 5) * 100);
   return per;
 }
+console.log(per)
 // console.log(`>>>> Overall Grade: ${per}% (${grade} of 5 responces correct) <<<<`);
 // let status = "?";
 // if (per >= 60) {
