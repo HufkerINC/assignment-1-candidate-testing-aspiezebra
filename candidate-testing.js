@@ -178,6 +178,9 @@ let candidateAnswer = " ";
 let questions = ["1) True or false: 5,000 meters = 5 kilometers. \n   Your Answer:  ", "2) (5 + 3)/2 * 10 = ? \n   Your Answer:  ", '3) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? \n   Your Answer:  ', "4) Who was the first American female in space? \n   Your Answer:  ", "5) What is the minimum crew size for the International Space Station (ISS)? \n   Your Answer:  "];
 let correctAnswers = ["true", "40", "Trajectory", "Sally Ride", "3"];
 let candidateAnswers = [""];
+let aone = [];
+let cone = [];
+let score = ""
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -218,7 +221,7 @@ function gradeQuiz(candidateAnswers) {
   // let candidateAnswers = input.question(questions[i]);
   let cone = candidateAnswers[i].toLowerCase();
   let aone = correctAnswers[i].toLowerCase();
-
+  
   //  console.log(typeof(candidateAnswers));a
 // let answerstwo = answers.tolowercase();
 // let candidateAnswerstwo = candidateAnswers.tolowercase();
@@ -253,14 +256,16 @@ function runProgram() {
   
   askQuestion();
   let score = gradeQuiz(this.candidateAnswers);
+  
   console.log(`You scored ${grade}/5 you got ${score}%`)
   if (score >= 60) {
   status = "PASSED";
   } else {
   status = "FAILED";
   }
-console.log(`>>>> STATUS: ${status} <<<<`);
-
+  console.log(`>>>> STATUS: ${status} <<<<`);
+  // console.log(aone)
+  //console.log(`ane = ${aone } cone = ${cone} candidate answers = [${candidateAnswers}] ${aone == cone}  ${aone===cone}`)
 }
 
 // Don't write any code below this line //
