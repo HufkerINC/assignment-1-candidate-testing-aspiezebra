@@ -66,7 +66,7 @@ describe("Candidate Testing solution", function() {
 	});
 
   it("gradeQuiz returns 100 for all correct answers", function() {
-    solution.candidateAnswers = ["Sally Ride", "True", "40", "Trajectory", "3"];
+    solution.candidateAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
     expect(solution.gradeQuiz(solution.candidateAnswers)).toBe(100);
 	});
 

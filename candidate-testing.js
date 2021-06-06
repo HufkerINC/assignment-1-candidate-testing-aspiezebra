@@ -17,7 +17,7 @@ let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = " ";
 // let questions = ["1) True or false: 5,000 meters = 5 kilometers. \n   Your Answer:  ", "2) (5 + 3)/2 * 10 = ? \n   Your Answer:  ", '3) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? \n   Your Answer:  ', "4) Who was the first American female in space? \n   Your Answer:  ", "5) What is the minimum crew size for the International Space Station (ISS)? \n   Your Answer:  "];
-let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
+let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",  "What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride", "True", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 let aone = [];
@@ -50,7 +50,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   
-  grade = 0;
+ 
   // if (candidateAnswer === correctAnswer) {
   //   console.log(`${candidateAnswer} is correct!!!!`)
   //   grade = grade + 1
@@ -62,20 +62,27 @@ function gradeQuiz(candidateAnswers) {
   // console.log(grade)
   // return grade;
   // }
+  grade=0
   for (i = 0; i < questions.length; i++) {
+    cone = candidateAnswers[i].toLowerCase();
+    aone = correctAnswers[i].toLowerCase();
+    // console.log(aone[1])
+    // cone = candidateAnswers.toLowerCase();
+    // aone = correctAnswers.toLowerCase();
+  
   // let candidateAnswers = input.question(questions[i]);
     // console.log(candidateAnswers)
     // console.log(candidateAnswers[i])
-    let cone = candidateAnswers[i].toLowerCase();
-    let aone = correctAnswers[i].toLowerCase();
-    // console.log(aone[i])
+    
+  
+        // console.log(aone[i])
     // console.log(cone[i])
   //  console.log(typeof(candidateAnswers));a
 // let answerstwo = answers.tolowercase();
 // let candidateAnswerstwo = candidateAnswers.tolowercase();
 // console.log(answerstwo);
-    grade = 0
-    if (cone[i] == aone[i]) {
+ 
+    if (cone == aone) {
       grade = grade + 1;
       // console.log(`grade on 79 ${grade}`)
    //console.log(`your answer ${candidateAnswers}`);
@@ -84,8 +91,9 @@ function gradeQuiz(candidateAnswers) {
       grade = grade
       console.log(`grade on 84 ${grade}`)
   //console.log(`your answer ${candidateAnswers}`);
-    console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
+      console.log(`   Correct Answer: ${correctAnswers[i]} \n \n`);
     }
+  }
     // console.log(grade)
     // for(i=0;i<5;i++){
     //   console.log(aone)
@@ -96,13 +104,13 @@ function gradeQuiz(candidateAnswers) {
     //   console.log(candidateAnswers[i])
     // }
 
-}
+
   // return grade;
   console.log(`grade on 100 ${grade}`)
   per = ((grade/5)*100);
   return per;
-}
-
+  }
+//}
 // console.log(per)
 // console.log(`>>>> Overall Grade: ${per}% (${grade} of 5 responces correct) <<<<`);
 // let status = "?";
@@ -121,9 +129,10 @@ function runProgram() {
   askQuestion();
   // gradeQuiz(this.candidateAnswers);
   gradeQuiz(this.candidateAnswers)
+  console.log(gradeQuiz(this.candidateAnswers))
   let score = gradeQuiz(this.candidateAnswers)
   // console.log(`import124 ${gradeQuiz(candidateAnswers)}`)
-  console.log(`import125 ${gradeQuiz(this.candidateAnswers)}`)
+  // console.log(`import125 ${gradeQuiz(this.candidateAnswers)}`)
   console.log(`You scored ${grade}/5 you got ${score}%`)
   if (score >= 60) {
   status = "PASSED";
@@ -147,4 +156,4 @@ module.exports = {
   candidateAnswers: candidateAnswers,
   gradeQuiz: gradeQuiz,
   runProgram: runProgram
-};
+}
