@@ -52,7 +52,7 @@ describe("Candidate Testing solution", function() {
 
   it("correctAnswers gives the correct answers", function() {
 		expect(solution.correctAnswers).toContain("Sally Ride");
-    expect(solution.correctAnswers).toContain("true");
+    expect(solution.correctAnswers).toContain("True");
     expect(solution.correctAnswers).toContain("40");
     expect(solution.correctAnswers).toContain("Trajectory");
     expect(solution.correctAnswers).toContain("3");
