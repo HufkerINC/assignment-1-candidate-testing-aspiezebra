@@ -74,6 +74,7 @@ function gradeQuiz(candidateAnswers) {
 // let answerstwo = answers.tolowercase();
 // let candidateAnswerstwo = candidateAnswers.tolowercase();
 // console.log(answerstwo);
+    grade = 0
     if (cone[i] == aone[i]) {
       grade = grade + 1;
       // console.log(`grade on 79 ${grade}`)
@@ -122,7 +123,7 @@ function runProgram() {
   gradeQuiz(this.candidateAnswers)
   let score = gradeQuiz(this.candidateAnswers)
   // console.log(`import124 ${gradeQuiz(candidateAnswers)}`)
-  // console.log(`import125 ${gradeQuiz(this.candidateAnswers)}`)
+  console.log(`import125 ${gradeQuiz(this.candidateAnswers)}`)
   console.log(`You scored ${grade}/5 you got ${score}%`)
   if (score >= 60) {
   status = "PASSED";
